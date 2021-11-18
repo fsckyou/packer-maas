@@ -19,6 +19,8 @@ autoinstall:
     layout:
       name: direct
 
+  packages:
+    - ubuntu-desktop
   late-commands:
     - echo 'ubuntu ALL=(ALL) NOPASSWD:ALL' > /target/etc/sudoers.d/ubuntu
 

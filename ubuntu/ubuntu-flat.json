@@ -51,8 +51,7 @@
             "sources": [
                 "{{template_dir}}/scripts/curtin-hooks",
                 "{{template_dir}}/scripts/install-custom-packages",
-                "{{template_dir}}/scripts/setup-bootloader",
-                "{{template_dir}}/packages/custom-packages.tar.gz"
+                "{{template_dir}}/scripts/setup-bootloader"
             ],
             "destination": "/tmp/"
         },

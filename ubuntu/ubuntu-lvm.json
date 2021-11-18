@@ -11,20 +11,20 @@
     "builders": [
         {
             "boot_command": [
-                "<wait>e<wait5>",
+                "<wait3>e<wait5>",
                 "<down><wait><down><wait><down><wait2><end><wait5>",
                 "<bs><bs><bs><bs><wait>autoinstall ---<wait><f10>"
             ],
             "boot_wait": "2s",
-            "cpus": 2,
-            "disk_size": "4G",
-            "headless": true,
+            "cpus": 4,
+            "disk_size": "8G",
             "http_directory": "{{user `http_directory`}}",
             "iso_checksum": "file:http://releases.ubuntu.com/20.04/SHA256SUMS",
             "iso_url": "https://releases.ubuntu.com/focal/ubuntu-20.04.3-live-server-amd64.iso",
             "iso_target_path": "packer_cache/ubuntu.iso",
             "memory": 1024,
             "type": "qemu",
+            "headless": true,
             "format": "raw",
             "qemuargs": [
                 [ "-vga", "qxl"],
@@ -41,8 +41,8 @@
             "ssh_username": "{{user `ssh_username`}}",
             "ssh_password": "{{user `ssh_password`}}",
             "ssh_handshake_attempts": 500,
-            "ssh_wait_timeout": "45m",
-            "ssh_timeout": "45m"
+            "ssh_wait_timeout": "60m",
+            "ssh_timeout": "60m"
         }
     ],
     "provisioners": [
